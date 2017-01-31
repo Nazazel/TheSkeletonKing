@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
 						rb.velocity = new Vector2 (0.0f, 0.0f);
 				}
 				if (rb.velocity.x > -3.0f) {
-				rb.velocity = new Vector2 (-1.0f, 0.0f);
+				rb.velocity = new Vector2 (-6.0f, 0.0f);
 				}
 			}
 		else if (Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow)) {
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
 					
 				}
 				if (rb.velocity.x < 3.0f) {
-				rb.velocity = new Vector2 (1.0f, 0.0f);
+				rb.velocity = new Vector2 (6.0f, 0.0f);
 				}
 			}
 		else if (Input.GetKey (KeyCode.DownArrow) && !Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.LeftArrow)) {
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour {
 					
 				}
 				if (rb.velocity.y > -3.0f) {
-				rb.velocity = new Vector2 (0.0f, -1.0f);
+				rb.velocity = new Vector2 (0.0f, -6.0f);
 				}
 			}
 		else if (Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.DownArrow)) {
@@ -43,20 +43,11 @@ public class Player : MonoBehaviour {
 						rb.velocity = new Vector2 (0.0f, 0.0f);
 				}
 				if (rb.velocity.y < 3.0f) {
-				rb.velocity = new Vector2 (0.0f, -1.0f);
+				rb.velocity = new Vector2 (0.0f, 6.0f);
 				}
 		}else {
 			rb.velocity = new Vector2 (0.0f, 0.0f);
 		}
 	}
 
-	void OnTriggerEnter(Collider2D other)
-	{
-		
-	}
-
-	void OnTriggerExit(Collider2D other)
-	{
-		
-	}
 }
