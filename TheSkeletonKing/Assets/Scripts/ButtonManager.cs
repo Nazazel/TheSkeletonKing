@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ButtonManager : MonoBehaviour
 	// Update is called once per frame
 	public void ExitGameButton()
     {
-        Application.Quit;
+        Application.Quit();
     }
 		
 }
