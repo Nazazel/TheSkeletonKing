@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Traps : MonoBehaviour
 {
-    public string trapName;
-    //change to strings later once player class is done
+    //get soul color from other class
     public string soulColor;
 
 	// Use this for initialization
@@ -23,25 +22,25 @@ public class Traps : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D trap)
     {
-        if (soulColor == "red" && (trapName == "spikes" || trapName == "arrows"))
+        if (soulColor == "red" && (trap.tag == "spikes" || trap.tag == "arrows"))
             {
-            SceneManager.LoadScene("Lose");
             //DELETE PLAYER CODE
             //so that everything resets
+            SceneManager.LoadScene("Lose");
             }
 
-        else if (soulColor == "blue" && (trapName == "pitfalls" || trapName == "arrows"))
+        else if (soulColor == "blue" && (trap.tag == "pitfalls" || trap.tag == "arrows"))
         {
-            SceneManager.LoadScene("Lose");
             //DELETE PLAYER CODE
             //so that everything resets
+            SceneManager.LoadScene("Lose");
         }
 
-        else if (soulColor == "green" && (trapName == "pitfalls" || trapName == "spikes"))
+        else if (soulColor == "green" && (trap.tag == "pitfalls" || trap.tag == "spikes"))
         {
-            SceneManager.LoadScene("Lose");
             //DELETE PLAYER CODE
             //so that everything resets
+            SceneManager.LoadScene("Lose");
         }
     }
 
