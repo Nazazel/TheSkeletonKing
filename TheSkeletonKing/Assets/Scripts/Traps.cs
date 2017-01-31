@@ -7,9 +7,7 @@ public class Traps : MonoBehaviour
 {
     public string trapName;
     //change to strings later once player class is done
-    public bool soulRed = true;
-    public bool soulBlue = true;
-    public bool soulGreen = true;
+    public string soulColor;
 
 	// Use this for initialization
 	void Start ()
@@ -25,10 +23,26 @@ public class Traps : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D trap)
     {
-        if (soulRed && (trapName == "spikes" || trapName == "arrows"))
+        if (soulColor == "red" && (trapName == "spikes" || trapName == "arrows"))
             {
             SceneManager.LoadScene("Lose");
+            //DELETE PLAYER CODE
+            //so that everything resets
             }
+
+        else if (soulColor == "blue" && (trapName == "pitfalls" || trapName == "arrows"))
+        {
+            SceneManager.LoadScene("Lose");
+            //DELETE PLAYER CODE
+            //so that everything resets
+        }
+
+        else if (soulColor == "green" && (trapName == "pitfalls" || trapName == "spikes"))
+        {
+            SceneManager.LoadScene("Lose");
+            //DELETE PLAYER CODE
+            //so that everything resets
+        }
     }
 
 }
