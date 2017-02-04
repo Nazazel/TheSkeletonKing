@@ -26,7 +26,8 @@ public class LevelTransition : MonoBehaviour {
 
 	public IEnumerator transitionLevel()
 	{
-		if (SceneManager.GetActiveScene ().name == "Tutorial") {
+		if (SceneManager.GetActiveScene ().name == "Tutorial")
+		{
 			if(!started)
 			{
 				yield return new WaitForSeconds (0.1f);
@@ -35,10 +36,25 @@ public class LevelTransition : MonoBehaviour {
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		} 
-		else if ()
+		else if (SceneManager.GetActiveScene().name == "Map 1" || SceneManager.GetActiveScene().name == "Map 1.1" || SceneManager.GetActiveScene().name == "Map 1.2")
 		{
-			
+			if (!started)
+			{
+				yield return new WaitForSeconds (0.1f);
+				started = true;
+				SceneManager.LoadSceneAsync (mapList2 [Random.Range (0, mapList2.Count)].ToString ());
+			}
 		}
+		else if (SceneManager.GetActiveScene().name == "Map 2" || SceneManager.GetActiveScene().name == "Map 2.1" || SceneManager.GetActiveScene().name == "Map 2.2")
+		{
+			if (!started)
+			{
+				yield return new WaitForSeconds (0.1f);
+				started = true;
+				SceneManager.LoadSceneAsync (mapList3 [Random.Range (0, mapList3.Count)].ToString ());
+			}
+		}
+
 	}
 
 	public void OnTriggerEnter2D(Collider2D other) {
