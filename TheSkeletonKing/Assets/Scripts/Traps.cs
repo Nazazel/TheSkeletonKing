@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Traps : MonoBehaviour
 {
     //get soul color from other class
-    public string soulColor;
+    public int soulColor;
 
 	// Use this for initialization
 	void Start ()
@@ -17,31 +17,37 @@ public class Traps : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        soulColor = GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul;
+    }
+
+    void playDeathAnimation()
+    {
+        StartCoroutine("waitThreeSeconds");
+    }
+
+    IEnumerator waitThreeSeconds()
+    {
+        //GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerAnimator.Play("");
+        yield return new WaitForSeconds(3.0f);
+        DestroyImmediate(GameObject.FindWithTag("Player"));
+        SceneManager.LoadScene("Lose");
+    }
 
     void OnTriggerEnter2D(Collider2D trap)
     {
-        if (soulColor == "red" && (trap.tag == "spikes" || trap.tag == "arrows"))
-            {
-            //DELETE PLAYER CODE
-            //so that everything resets
-            SceneManager.LoadScene("Lose");
-            }
-
-        else if (soulColor == "blue" && (trap.tag == "pitfalls" || trap.tag == "arrows"))
+        if (soulColor == 1 && (trap.tag == "spikes" || trap.tag == "arrows"))
         {
-            //DELETE PLAYER CODE
-            //so that everything resets
-            SceneManager.LoadScene("Lose");
+            playDeathAnimation();
         }
 
-        else if (soulColor == "green" && (trap.tag == "pitfalls" || trap.tag == "spikes"))
+        else if (soulColor == 2 && (trap.tag == "pitfalls" || trap.tag == "arrows"))
         {
-            //DELETE PLAYER CODE
-            //so that everything resets
-            SceneManager.LoadScene("Lose");
+            playDeathAnimation();
+        }
+
+        else if (soulColor == 3 && (trap.tag == "pitfalls" || trap.tag == "spikes"))
+        {
+            playDeathAnimation();
         }
     }
-
 }
