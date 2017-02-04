@@ -8,7 +8,7 @@ public class Key : MonoBehaviour {
 	private bool waitForPress;
 	// Use this for initialization
 	void Start () {
-		
+		waitForPress = false;
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,7 @@ public class Key : MonoBehaviour {
 	{
 		if (waitForPress && Input.GetKey (KeyCode.E)) 
 		{
+			
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
