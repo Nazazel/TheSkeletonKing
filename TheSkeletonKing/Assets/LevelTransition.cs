@@ -8,6 +8,7 @@ public class LevelTransition : MonoBehaviour {
 	public ArrayList mapList2 = new ArrayList ();
 	public ArrayList mapList3 = new ArrayList ();
 	public bool started;
+	public string randomizedName;
 
 	// Use this for initialization
 	void Start () {
@@ -28,8 +29,10 @@ public class LevelTransition : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "Tutorial") {
 			if(!started)
 			{
+				yield return new WaitForSeconds (0.1f);
+				randomizedName = mapList1 [Random.Range (0, mapList1.Count)].ToString();
 				started = true;
-				SceneManager.LoadSceneAsync (mapList1 [Random.Range (0, mapList1.Count)]);
+				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		} 
 		else if ()
