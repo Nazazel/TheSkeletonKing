@@ -30,6 +30,14 @@ public class Credits : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         theText.text = "Project Leads:\n\nNazely Hartoonian\n\nUlises Perez";
         yield return new WaitForSeconds(3.0f);
+        theText.fontSize = 70;
+        theText.text = "Programmers:\nUlises Perez\nYixuan (Angela) Li\nZican Li\nShiyang Fang\nShuzhan Xie";
+        yield return new WaitForSeconds(3.0f);
+        theText.fontSize = 90;
+        theText.text = "Artist:\n\nClaudia O'Flaherty";
+        yield return new WaitForSeconds(3.0f);
+        theText.text = "All audio downloaded from Freesound.org";
+        yield return new WaitForSeconds(3.0f);
         theText.text = " ";
         yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene("Menu");
