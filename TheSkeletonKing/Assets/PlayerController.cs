@@ -8,10 +8,11 @@ public class PlayerController : MonoBehaviour {
 
 	//1=RED, 2=BLUE, 3=GREEN
 	public int currentSoul;
-
+	public int numKeys;
 
 	// Use this for initialization
 	void Start () {
+		numKeys = 0;
 		currentSoul = 1;
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 	}
