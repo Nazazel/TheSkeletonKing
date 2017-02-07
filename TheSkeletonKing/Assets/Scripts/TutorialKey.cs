@@ -6,9 +6,15 @@ public class TutorialKey : MonoBehaviour {
 
 	public bool requireButtonPress;
 	private bool waitForPress;
+	public bool obj2Complete;
+	public bool obj5Complete;
+	public bool obj7Complete;
 	// Use this for initialization
 	void Start () {
 		waitForPress = false;
+		obj2Complete = false;
+		obj5Complete = false;
+		obj7Complete = false;
 	}
 
 	// Update is called once per frame
@@ -22,6 +28,7 @@ public class TutorialKey : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
+				obj2Complete = true;
 			}
 		}
 		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 4) 
@@ -32,6 +39,7 @@ public class TutorialKey : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
+				obj5Complete = true;
 			}
 		}
 		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 6) 
@@ -42,6 +50,7 @@ public class TutorialKey : MonoBehaviour {
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
+				obj7Complete = true;
 			}
 		}
 	}
