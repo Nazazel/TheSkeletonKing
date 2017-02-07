@@ -4,10 +4,14 @@ using System.Collections;
 public class TutorialDoor : MonoBehaviour {
 
 	public bool obj1Complete;
+	public bool obj3Complete;
+	public bool obj8Complete;
 	public bool Ready;
 	// Use this for initialization
 	void Start () {
 		obj1Complete = false;
+		obj3Complete = false;
+		obj8Complete = false;
 		Ready = false;
 	}
 
@@ -18,11 +22,17 @@ public class TutorialDoor : MonoBehaviour {
 			obj1Complete = true;
 			Ready = false;
 		}
-		else if (Ready && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 8)
+		else if (Ready && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial>().objectiveNum == 2)
+		{
+			obj3Complete = true;
+			Ready = false;
+		}
+		else if (Ready && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 7)
 		{
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;
+			obj8Complete = true;
 			Ready = false;
 		}
 	}
