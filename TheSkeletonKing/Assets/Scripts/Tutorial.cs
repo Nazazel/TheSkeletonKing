@@ -28,7 +28,7 @@ public class Tutorial : MonoBehaviour {
 		{
 			objectiveNum++;
 		}
-		else if (objectiveNum == 4 && GameObject.FindWithTag("TutorialKey").GetComponent<TutorialKey>().obj5Complete)
+		else if (objectiveNum == 4 && GameObject.FindWithTag("TutorialKey2").GetComponent<TutorialKey>().obj5Complete)
 		{
 			objectiveNum++;
 		}
@@ -36,7 +36,7 @@ public class Tutorial : MonoBehaviour {
 		{
 			objectiveNum++;
 		}
-		else if (objectiveNum == 6 && GameObject.FindWithTag("TutorialKey").GetComponent<TutorialKey>().obj7Complete)
+		else if (objectiveNum == 6 && GameObject.FindWithTag("TutorialKey3").GetComponent<TutorialKey>().obj7Complete)
 		{
 			objectiveNum++;
 		}

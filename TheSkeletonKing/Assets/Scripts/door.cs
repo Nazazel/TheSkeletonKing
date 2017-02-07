@@ -14,7 +14,7 @@ public class door : MonoBehaviour {
 		if (Ready && GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys == 3)
 		{
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+			GameObject.FindWithTag("DoorCollider").GetComponent<BoxCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;
 			Ready = false;
 		}

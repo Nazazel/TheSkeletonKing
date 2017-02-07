@@ -29,8 +29,8 @@ public class TutorialDoor : MonoBehaviour {
 		}
 		else if (Ready && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 7)
 		{
-			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
-			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+			//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+			GameObject.FindWithTag("DoorCollider").GetComponent<BoxCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;
 			obj8Complete = true;
 			Ready = false;
