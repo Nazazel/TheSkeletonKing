@@ -21,6 +21,7 @@ public class attackTower : MonoBehaviour {
 			waitForPress = false;
 		}
 	}
+
 	void OnTriggerEnter2D(Collider2D other) {
 
 		if (other.name == "Player") {
