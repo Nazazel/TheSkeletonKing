@@ -12,7 +12,8 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (objectiveNum == 0 && GameObject.FindWithTag("TutorialDoor").GetComponent<TutorialDoor>().obj1Complete) {
+		if (objectiveNum == 0 && GameObject.FindWithTag("TutorialDoor").GetComponent<TutorialDoor>().obj1Complete)
+		{
 			objectiveNum++;
 		}
 
