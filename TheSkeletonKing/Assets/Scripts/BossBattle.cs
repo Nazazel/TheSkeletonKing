@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossBattle : MonoBehaviour {
 	public int bossHealth;
+	public 
 	// Use this for initialization
 	void Start () {
 		bossHealth = 3;

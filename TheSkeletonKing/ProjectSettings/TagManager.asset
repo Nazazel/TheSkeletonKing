@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DoorCollider
+  - TutorialKey
+  - TutorialDoor
+  - TutorialSoulStation
+  - ObjectiveTracker
+  - TutorialKey2
+  - TutorialKey3
   layers:
   - Default
   - TransparentFX
