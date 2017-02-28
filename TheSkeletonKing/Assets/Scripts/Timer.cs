@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float startingTime = 10;
+    public float startingTime = 90;
     public float timeLeft;
     public Slider timeSlider;
     public bool started;
