@@ -11,6 +11,9 @@ TagManager:
   - ObjectiveTracker
   - TutorialKey2
   - TutorialKey3
+  - spikes
+  - pitfalls
+  - arrows
   layers:
   - Default
   - TransparentFX

@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 25606630}
   - component: {fileID: 25606629}
   - component: {fileID: 25606631}
+  - component: {fileID: 25606632}
   m_Layer: 0
   m_Name: Soul Station (3)
   m_TagString: Untagged
@@ -234,6 +235,18 @@ BoxCollider2D:
   m_Offset: {x: 0.0028667862, y: -0.007616549}
   serializedVersion: 2
   m_Size: {x: 0.48520365, y: 0.3302582}
+--- !u!114 &25606632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25606628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &44359797
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +563,7 @@ GameObject:
   - component: {fileID: 256984630}
   - component: {fileID: 256984629}
   - component: {fileID: 256984631}
+  - component: {fileID: 256984632}
   m_Layer: 0
   m_Name: Soul Station (1)
   m_TagString: Untagged
@@ -619,6 +633,18 @@ BoxCollider2D:
   m_Offset: {x: 0.002521889, y: -0.0022339083}
   serializedVersion: 2
   m_Size: {x: 0.4028956, y: 0.3317085}
+--- !u!114 &256984632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256984628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &317567933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,6 +2705,7 @@ GameObject:
   - component: {fileID: 596707040}
   - component: {fileID: 596707039}
   - component: {fileID: 596707041}
+  - component: {fileID: 596707042}
   m_Layer: 0
   m_Name: Soul Station
   m_TagString: Untagged
@@ -2748,6 +2775,18 @@ BoxCollider2D:
   m_Offset: {x: -0.015395032, y: 0.0022724406}
   serializedVersion: 2
   m_Size: {x: 0.40394112, y: 0.31730506}
+--- !u!114 &596707042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596707038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &665096381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3019,7 @@ GameObject:
   - component: {fileID: 744247762}
   - component: {fileID: 744247761}
   - component: {fileID: 744247763}
+  - component: {fileID: 744247764}
   m_Layer: 0
   m_Name: Soul Station (6)
   m_TagString: Untagged
@@ -3049,6 +3089,18 @@ BoxCollider2D:
   m_Offset: {x: -0.014333143, y: -0.020310797}
   serializedVersion: 2
   m_Size: {x: 0.46227017, y: 0.3556474}
+--- !u!114 &744247764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744247760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &789670377
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,6 +3624,23 @@ BoxCollider2D:
   m_Offset: {x: -0.003663796, y: 0.06284851}
   serializedVersion: 2
   m_Size: {x: 0.81010795, y: 0.5645348}
+--- !u!1 &1008543688 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1717576075302704, guid: 098b0d1066139d246b00ea7aa8008daf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1866539927}
+--- !u!114 &1008543690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1008543688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84566999998f33342aea7d0b69981411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ready: 0
 --- !u!1 &1019320927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3902,7 @@ GameObject:
   - component: {fileID: 1072755358}
   - component: {fileID: 1072755357}
   - component: {fileID: 1072755359}
+  - component: {fileID: 1072755360}
   m_Layer: 0
   m_Name: key
   m_TagString: Untagged
@@ -3902,6 +3972,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &1072755360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072755356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7222cfeaa0b7b34d8e9dee22972dbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &1097731284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,6 +3994,7 @@ GameObject:
   - component: {fileID: 1097731286}
   - component: {fileID: 1097731285}
   - component: {fileID: 1097731287}
+  - component: {fileID: 1097731288}
   m_Layer: 0
   m_Name: Soul Station (4)
   m_TagString: Untagged
@@ -3981,6 +4064,18 @@ BoxCollider2D:
   m_Offset: {x: -0.00000039416832, y: 0.001250835}
   serializedVersion: 2
   m_Size: {x: 0.4387519, y: 0.34953147}
+--- !u!114 &1097731288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097731284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &1117535211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,6 +4278,7 @@ GameObject:
   - component: {fileID: 1398551785}
   - component: {fileID: 1398551784}
   - component: {fileID: 1398551786}
+  - component: {fileID: 1398551787}
   m_Layer: 0
   m_Name: key (2)
   m_TagString: Untagged
@@ -4252,6 +4348,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &1398551787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1398551783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7222cfeaa0b7b34d8e9dee22972dbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &1427067472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4727,6 +4835,7 @@ GameObject:
   - component: {fileID: 1550955235}
   - component: {fileID: 1550955234}
   - component: {fileID: 1550955236}
+  - component: {fileID: 1550955237}
   m_Layer: 0
   m_Name: Soul Station (5)
   m_TagString: Untagged
@@ -4796,6 +4905,18 @@ BoxCollider2D:
   m_Offset: {x: 0.0057335724, y: -0.0050777863}
   serializedVersion: 2
   m_Size: {x: 0.43360516, y: 0.335336}
+--- !u!114 &1550955237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1550955233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &1631685845
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,6 +5270,7 @@ GameObject:
   - component: {fileID: 1793527176}
   - component: {fileID: 1793527175}
   - component: {fileID: 1793527177}
+  - component: {fileID: 1793527178}
   m_Layer: 0
   m_Name: key (1)
   m_TagString: Untagged
@@ -5218,6 +5340,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!114 &1793527178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793527174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7222cfeaa0b7b34d8e9dee22972dbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &1801021556 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1128065056795800, guid: de59056dc1226264298ed60675a667c2,
@@ -5305,9 +5439,10 @@ GameObject:
   - component: {fileID: 1867858319}
   - component: {fileID: 1867858318}
   - component: {fileID: 1867858320}
+  - component: {fileID: 1867858321}
   m_Layer: 0
   m_Name: PIT WE USE
-  m_TagString: Untagged
+  m_TagString: pitfalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5387,6 +5522,18 @@ PolygonCollider2D:
       - {x: 0.5257803, y: 0.098920316}
       - {x: 0.2753841, y: 0.099985324}
       - {x: 0.14, y: 0.22}
+--- !u!114 &1867858321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867858317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80ca270d17a8704cb8f385ff90b3a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulColor: 0
 --- !u!1 &1911894950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,6 +5744,7 @@ GameObject:
   - component: {fileID: 1991103968}
   - component: {fileID: 1991103967}
   - component: {fileID: 1991103969}
+  - component: {fileID: 1991103970}
   m_Layer: 0
   m_Name: Soul Station (2)
   m_TagString: Untagged
@@ -5666,6 +5814,18 @@ BoxCollider2D:
   m_Offset: {x: 0.0019959698, y: -0.018296998}
   serializedVersion: 2
   m_Size: {x: 0.40449736, y: 0.33014312}
+--- !u!114 &1991103970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991103966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2081782c9f5264cb1935a2ff47195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requireButtonPress: 1
 --- !u!1 &2040391281
 GameObject:
   m_ObjectHideFlags: 0

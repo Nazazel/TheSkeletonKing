@@ -27,6 +27,8 @@ public class Traps : MonoBehaviour
 
     IEnumerator waitThreeSeconds()
     {
+		GameObject.FindWithTag("Player").GetComponent<PlayerController>().endGame = true;
+		GameObject.FindWithTag("Player").GetComponent<PlayerController>().rb.velocity = new Vector2 (0.0f, 0.0f);;
         //GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerAnimator.Play("");
         yield return new WaitForSeconds(3.0f);
         DestroyImmediate(GameObject.FindWithTag("Player"));
@@ -35,17 +37,17 @@ public class Traps : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D trap)
     {
-        if (soulColor == 1 && (trap.tag == "spikes" || trap.tag == "arrows"))
+		if (soulColor == 1 && (gameObject.tag == "spikes" || gameObject.tag == "arrows"))
         {
             playDeathAnimation();
         }
 
-        else if (soulColor == 2 && (trap.tag == "pitfalls" || trap.tag == "arrows"))
+		else if (soulColor == 2 && (gameObject.tag == "pitfalls" || gameObject.tag == "arrows"))
         {
             playDeathAnimation();
         }
 
-        else if (soulColor == 3 && (trap.tag == "pitfalls" || trap.tag == "spikes"))
+		else if (soulColor == 3 && (gameObject.tag == "pitfalls" || gameObject.tag == "spikes"))
         {
             playDeathAnimation();
         }
