@@ -1,23 +1,22 @@
 fileFormatVersion: 2
-guid: a73d1b7b628be6d43b8011b5de9ba9ca
-timeCreated: 1487688846
+guid: 9d90364dae0cbf745bd13ad906089eba
+timeCreated: 1489386149
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: redtoblue_0
-    21300002: redtoblue_1
-    21300004: redtoblue_2
-    21300006: redtoblue_3
-    21300008: redtoblue_4
-    21300010: redtoblue_5
-    21300012: redtoblue_6
-    21300014: redtoblue_7
-  serializedVersion: 2
+    21300000: greendeath_0
+    21300002: greendeath_1
+    21300004: greendeath_2
+    21300006: greendeath_3
+    21300008: greendeath_4
+    21300010: greendeath_5
+    21300012: greendeath_6
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -29,23 +28,19 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -53,114 +48,122 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: redtoblue_0
+      name: greendeath_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 252
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_1
+      name: greendeath_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 210
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_2
+      name: greendeath_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 168
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_3
+      name: greendeath_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 126
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_4
+      name: greendeath_4
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 84
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_5
+      name: greendeath_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 0
-        width: 32
-        height: 96
+        x: 0
+        y: 42
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: redtoblue_6
+      name: greendeath_6
       rect:
         serializedVersion: 2
-        x: 193
+        x: 0
         y: 0
-        width: 32
-        height: 96
+        width: 42
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: redtoblue_7
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 0
-        width: 32
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -29,7 +29,16 @@ public class Traps : MonoBehaviour
     {
 		GameObject.FindWithTag("Player").GetComponent<PlayerController>().endGame = true;
 		GameObject.FindWithTag("Player").GetComponent<PlayerController>().rb.velocity = new Vector2 (0.0f, 0.0f);;
-        //GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerAnimator.Play("");
+		if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul == 1) {
+			GameObject.FindWithTag("Player").GetComponent<Animator>().Play("RedDeath");
+		} 
+		else if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul == 2) {
+			GameObject.FindWithTag("Player").GetComponent<Animator>().Play("BlueDeath");		
+		} 
+		else if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul == 3) {
+			GameObject.FindWithTag("Player").GetComponent<Animator>().Play("GreenDeath");		
+		}
+
         yield return new WaitForSeconds(3.0f);
         DestroyImmediate(GameObject.FindWithTag("Player"));
         SceneManager.LoadScene("Lose");
