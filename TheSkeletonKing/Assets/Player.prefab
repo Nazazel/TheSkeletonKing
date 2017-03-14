@@ -70,8 +70,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918534488382490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.413, y: -1.818, z: -1.06}
+  m_LocalScale: {x: 1.173744, y: 1.1149979, z: 5.3832507}
   m_Children:
   - {fileID: 4296441605164710}
   m_Father: {fileID: 0}
@@ -97,7 +97,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9351555
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -142,9 +142,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.075}
   serializedVersion: 2
-  m_Radius: 0.17744634
+  m_Radius: 0.077082366
 --- !u!81 &81165733014448240
 AudioListener:
   m_ObjectHideFlags: 1
@@ -191,6 +191,9 @@ MonoBehaviour:
   currentSoul: 0
   numKeys: 0
   endGame: 0
+  scenetransition: 0
+  previousscene: 
+  currentscene: 
 --- !u!124 &124345472933031242
 Behaviour:
   m_ObjectHideFlags: 1
@@ -228,7 +231,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b328355fe9dee414b95d3acd94a169ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
