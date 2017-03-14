@@ -40,8 +40,9 @@ public class Traps : MonoBehaviour
 		}
 
         yield return new WaitForSeconds(3.0f);
-        DestroyImmediate(GameObject.FindWithTag("Player"));
+        GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
         SceneManager.LoadScene("Lose");
+        DestroyImmediate(GameObject.FindWithTag("Player"));
     }
 
     void OnTriggerEnter2D(Collider2D trap)
