@@ -25,7 +25,7 @@ public class TutorialKey : MonoBehaviour {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
-				//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
 				obj2Complete = true;
@@ -36,7 +36,7 @@ public class TutorialKey : MonoBehaviour {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
-				//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
 				obj5Complete = true;
@@ -47,7 +47,7 @@ public class TutorialKey : MonoBehaviour {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
-				//gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				waitForPress = false;
 				obj7Complete = true;
