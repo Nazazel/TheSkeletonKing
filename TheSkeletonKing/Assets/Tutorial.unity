@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 861920712}
   m_Layer: 0
   m_Name: key (1)
-  m_TagString: TutorialKey
+  m_TagString: TutorialKey2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 1169418246}
   m_Layer: 0
   m_Name: key
-  m_TagString: TutorialKey3
+  m_TagString: TutorialKey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2000,7 +2000,7 @@ GameObject:
   - component: {fileID: 1607572807}
   m_Layer: 0
   m_Name: key (2)
-  m_TagString: TutorialKey2
+  m_TagString: TutorialKey3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
