@@ -23,8 +23,12 @@ public class TutorialSoulStation : MonoBehaviour {
 		{
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
+					StopAllCoroutines ();
+					StartCoroutine ("OrbTransition");
 					GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul++;
 				} else {
+					StopAllCoroutines ();
+					StartCoroutine ("OrbTransition");
 					GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul = 1;
 				}
 				obj4Complete = true;
@@ -34,8 +38,12 @@ public class TutorialSoulStation : MonoBehaviour {
 		{
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
+					StopAllCoroutines ();
+					StartCoroutine ("OrbTransition");
 					GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul++;
 				} else {
+					StopAllCoroutines ();
+					StartCoroutine ("OrbTransition");
 					GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul = 1;
 				}
 				obj6Complete = true;
@@ -60,6 +68,32 @@ public class TutorialSoulStation : MonoBehaviour {
 		{
 			waitForPress = false;
 		}
+	}
+
+	public IEnumerator OrbTransition()
+	{
+		if(GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul == 1)
+		{
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Red Orb to Blue");
+			yield return new WaitForSeconds(0.5f);
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Blue Orb Idle");
+			StopCoroutine ("OrbTransition");
+		}
+		else if(GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul == 2)
+		{
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Blue Orb to Green");
+			yield return new WaitForSeconds(0.5f);
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Green Orb Idle");
+			StopCoroutine ("OrbTransition");
+		}
+		else if(GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul == 3)
+		{
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Green Orb to Red");
+			yield return new WaitForSeconds(0.5f);
+			GameObject.FindWithTag ("Player").GetComponent<Animator> ().Play ("Red Orb Idle");
+			StopCoroutine ("OrbTransition");
+		}
+
 	}
 
 }
