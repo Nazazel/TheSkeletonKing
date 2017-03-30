@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 923935276}
   m_Layer: 0
   m_Name: Tutorial Script
-  m_TagString: Untagged
+  m_TagString: ObjectiveTracker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
