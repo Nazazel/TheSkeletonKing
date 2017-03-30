@@ -244,6 +244,11 @@ Prefab:
       propertyPath: m_TagString
       value: pitfalls
       objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
   m_IsPrefabParent: 0
@@ -847,6 +852,11 @@ Prefab:
       propertyPath: m_TagString
       value: pitfalls
       objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
   m_IsPrefabParent: 0
@@ -942,6 +952,11 @@ Prefab:
     - target: {fileID: 1128065056795800, guid: de59056dc1226264298ed60675a667c2, type: 2}
       propertyPath: m_TagString
       value: pitfalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
@@ -1922,6 +1937,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.8336296
       objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
   m_IsPrefabParent: 0
@@ -2400,6 +2420,11 @@ Prefab:
       propertyPath: m_TagString
       value: pitfalls
       objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
   m_IsPrefabParent: 0
@@ -2842,6 +2867,11 @@ Prefab:
       propertyPath: m_TagString
       value: pitfalls
       objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
   m_IsPrefabParent: 0
@@ -2928,6 +2958,11 @@ Prefab:
     - target: {fileID: 1128065056795800, guid: de59056dc1226264298ed60675a667c2, type: 2}
       propertyPath: m_TagString
       value: pitfalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
@@ -3024,6 +3059,11 @@ Prefab:
     - target: {fileID: 1128065056795800, guid: de59056dc1226264298ed60675a667c2, type: 2}
       propertyPath: m_TagString
       value: pitfalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 212489865911516206, guid: de59056dc1226264298ed60675a667c2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de59056dc1226264298ed60675a667c2, type: 2}
