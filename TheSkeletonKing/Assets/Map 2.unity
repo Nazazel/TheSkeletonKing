@@ -2712,7 +2712,7 @@ GameObject:
   - component: {fileID: 993128127}
   m_Layer: 0
   m_Name: spikeplural (13)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3339,7 +3339,7 @@ GameObject:
   - component: {fileID: 1125468760}
   m_Layer: 0
   m_Name: spikeplural (11)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3465,7 +3465,7 @@ GameObject:
   - component: {fileID: 1129704458}
   m_Layer: 0
   m_Name: spikeplural (2)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3692,7 +3692,7 @@ GameObject:
   - component: {fileID: 1186973370}
   m_Layer: 0
   m_Name: spikeplural (4)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4435,7 +4435,7 @@ GameObject:
   - component: {fileID: 1483551585}
   m_Layer: 0
   m_Name: spikeplural (6)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5055,7 +5055,7 @@ GameObject:
   - component: {fileID: 1831158085}
   m_Layer: 0
   m_Name: spikeplural (12)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5183,7 +5183,7 @@ GameObject:
   - component: {fileID: 1857834316}
   m_Layer: 0
   m_Name: spikeplural (3)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5460,7 +5460,7 @@ GameObject:
   - component: {fileID: 1913790769}
   m_Layer: 0
   m_Name: spikeplural (1)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5691,7 +5691,7 @@ GameObject:
   - component: {fileID: 1982582814}
   m_Layer: 0
   m_Name: spikeplural (9)
-  m_TagString: pitfalls
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
