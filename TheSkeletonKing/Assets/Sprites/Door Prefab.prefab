@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4729103534085654}
   - component: {fileID: 212891913356140048}
   - component: {fileID: 61499432772675682}
+  - component: {fileID: 114071776795350600}
   m_Layer: 0
   m_Name: gate
   m_TagString: Untagged
@@ -137,6 +138,18 @@ BoxCollider2D:
   m_Offset: {x: 0.008231753, y: 0.1422495}
   serializedVersion: 2
   m_Size: {x: 0.37729242, y: 0.39335868}
+--- !u!114 &114071776795350600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717576075302704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84566999998f33342aea7d0b69981411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ready: 0
 --- !u!212 &212891913356140048
 SpriteRenderer:
   m_ObjectHideFlags: 1

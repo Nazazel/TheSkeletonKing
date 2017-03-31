@@ -3610,8 +3610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulColor: 0
---- !u!58 &2128609326
-CircleCollider2D:
+--- !u!60 &2128609326
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3622,5 +3622,18 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.32
+  m_Points:
+    m_Paths:
+    - - {x: -0.08, y: 0.22}
+      - {x: -0.14, y: 0.21}
+      - {x: -0.3155392, y: 0.08202832}
+      - {x: -0.58873165, y: 0.08930532}
+      - {x: -0.5957655, y: -0.023748444}
+      - {x: -0.33911023, y: -0.051578913}
+      - {x: -0.14999999, y: -0.19999999}
+      - {x: 0.17, y: -0.19999999}
+      - {x: 0.3700424, y: -0.042505503}
+      - {x: 0.6655541, y: -0.012961984}
+      - {x: 0.71479166, y: 0.08513763}
+      - {x: 0.37784764, y: 0.09425019}
+      - {x: 0.14, y: 0.22}
