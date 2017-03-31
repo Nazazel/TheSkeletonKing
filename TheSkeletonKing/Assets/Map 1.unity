@@ -4296,6 +4296,7 @@ GameObject:
   - component: {fileID: 1006623008}
   - component: {fileID: 1006623007}
   - component: {fileID: 1006623009}
+  - component: {fileID: 1006623010}
   m_Layer: 0
   m_Name: arrow plate (2)
   m_TagString: arrows
@@ -4365,6 +4366,18 @@ BoxCollider2D:
   m_Offset: {x: -0.003663796, y: 0.06284851}
   serializedVersion: 2
   m_Size: {x: 0.81010795, y: 0.5645348}
+--- !u!114 &1006623010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006623006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80ca270d17a8704cb8f385ff90b3a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulColor: 0
 --- !u!1 &1008543688 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1717576075302704, guid: 098b0d1066139d246b00ea7aa8008daf,
