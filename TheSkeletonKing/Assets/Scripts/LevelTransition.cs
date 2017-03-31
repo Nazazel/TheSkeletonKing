@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelTransition : MonoBehaviour {
-
+	
 	public Image FadeImg;
+	public float fadeSpeed = 1.5f;
 	public ArrayList mapList1 = new ArrayList ();
 	public ArrayList mapList2 = new ArrayList ();
 	public ArrayList mapList3 = new ArrayList ();
@@ -95,10 +97,8 @@ public class LevelTransition : MonoBehaviour {
 		FadeImg.color = Color.Lerp (FadeImg.color, Color.clear, fadeSpeed * Time.deltaTime);
 		if (FadeImg.color.a < 0.2f) {
 			CancelInvoke ("FadeToClear");
-			introDone = true;
 			FadeImg.color = Color.clear;
 			Debug.Log (FadeImg.color.a);
-			activeHint = false;
 		}
 	}
 }
