@@ -3282,11 +3282,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.26
+      value: -11.11
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.258
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3302,7 +3302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3314,7 +3314,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalScale.y
@@ -3322,7 +3322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705240791685742, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.9249994
+      value: 1.7324992
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 098b0d1066139d246b00ea7aa8008daf, type: 2}
@@ -4731,8 +4731,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -2.2808108, y: 6.308515}
-      - {x: -3.4483209, y: 6.29788}
-      - {x: -3.5735776, y: 6.2626143}
+      - {x: -3.8182511, y: 6.798828}
+      - {x: -4.212859, y: 6.237217}
+      - {x: -3.5735784, y: 6.247202}
       - {x: -3.6006782, y: 4.68038}
       - {x: -3.534422, y: 4.5678606}
       - {x: -3.3894415, y: 4.5201435}
@@ -4918,8 +4919,9 @@ PolygonCollider2D:
       - {x: 3.8514428, y: 3.045933}
       - {x: 3.9083772, y: 3.1122148}
       - {x: 3.897921, y: 3.7061088}
-      - {x: 3.8987472, y: 6.264918}
-      - {x: 3.8061552, y: 6.3027964}
+      - {x: 3.9274101, y: 6.26492}
+      - {x: 4.472701, y: 6.217083}
+      - {x: 4.4892874, y: 6.3708725}
 --- !u!61 &1601051550
 BoxCollider2D:
   m_ObjectHideFlags: 0
