@@ -2892,7 +2892,7 @@ GameObject:
   - component: {fileID: 1712025540}
   - component: {fileID: 1712025539}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: leveltransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2909,6 +2909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571debb5fbd80af47be0acdb63c8e345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeImg: {fileID: 0}
+  fadeSpeed: 1.5
   started: 0
   randomizedName: 
 --- !u!61 &1712025540
