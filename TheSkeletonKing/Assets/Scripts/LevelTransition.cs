@@ -5,7 +5,7 @@ using System.Collections;
 
 public class LevelTransition : MonoBehaviour {
 
-	//public Image fadeScreen;
+	public Image FadeImg;
 	public ArrayList mapList1 = new ArrayList ();
 	public ArrayList mapList2 = new ArrayList ();
 	public ArrayList mapList3 = new ArrayList ();
@@ -14,7 +14,7 @@ public class LevelTransition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//fadeScreen = GameObject.Find ("Fade");
+		FadeImg = GameObject.Find ("Fade").GetComponent<Image>();
 		started = false;
 		mapList1.Add ("Map 1");
 		mapList1.Add ("Map 1.1");
@@ -23,7 +23,6 @@ public class LevelTransition : MonoBehaviour {
 		mapList2.Add ("Map 2.1");
 		mapList2.Add ("Map 2.2");
 		mapList3.Add ("Map 3");
-		mapList3.Add ("Map 3.1");
 		mapList3.Add ("Map 3.2");
 	}
 
@@ -36,7 +35,8 @@ public class LevelTransition : MonoBehaviour {
 				yield return new WaitForSeconds (0.1f);
 				randomizedName = mapList1 [Random.Range (0, mapList1.Count)].ToString();
 				started = true;
-				//yield return new WaitUntil(() => fadeScreen.color.a == 1);
+				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				yield return new WaitUntil(() => FadeImg.color.a == 1);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		} 
@@ -45,8 +45,11 @@ public class LevelTransition : MonoBehaviour {
 			if (!started)
 			{
 				yield return new WaitForSeconds (0.1f);
+				randomizedName = mapList2 [Random.Range (0, mapList2.Count)].ToString();
 				started = true;
-				SceneManager.LoadSceneAsync (mapList2 [Random.Range (0, mapList2.Count)].ToString ());
+				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		}
 		else if (SceneManager.GetActiveScene().name == "Map 2" || SceneManager.GetActiveScene().name == "Map 2.1" || SceneManager.GetActiveScene().name == "Map 2.2")
@@ -54,8 +57,22 @@ public class LevelTransition : MonoBehaviour {
 			if (!started)
 			{
 				yield return new WaitForSeconds (0.1f);
+				randomizedName = mapList3 [Random.Range (0, mapList3.Count)].ToString();
 				started = true;
-				SceneManager.LoadSceneAsync (mapList3 [Random.Range (0, mapList3.Count)].ToString ());
+				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				SceneManager.LoadSceneAsync (randomizedName);
+			}
+		}
+		else if (SceneManager.GetActiveScene().name == "Map 3" || SceneManager.GetActiveScene().name == "Map 3.2")
+		{
+			if (!started)
+			{
+				yield return new WaitForSeconds (0.1f);
+				started = true;
+				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				SceneManager.LoadSceneAsync ("Map Boss");
 			}
 		}
 
@@ -63,5 +80,25 @@ public class LevelTransition : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other) {
 		StartCoroutine("transitionLevel");
+	}
+
+	public void FadeToBlack()
+	{
+		FadeImg.color = Color.Lerp (FadeImg.color, Color.black, fadeSpeed * Time.deltaTime);
+		if (FadeImg.color.a == 1.0f) {
+			CancelInvoke ("FadeToBlack");
+		}
+	}
+
+	public void FadeToClear()
+	{
+		FadeImg.color = Color.Lerp (FadeImg.color, Color.clear, fadeSpeed * Time.deltaTime);
+		if (FadeImg.color.a < 0.2f) {
+			CancelInvoke ("FadeToClear");
+			introDone = true;
+			FadeImg.color = Color.clear;
+			Debug.Log (FadeImg.color.a);
+			activeHint = false;
+		}
 	}
 }
