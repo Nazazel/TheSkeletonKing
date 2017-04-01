@@ -28,6 +28,8 @@ public class IntroScript : MonoBehaviour {
 
 	public IEnumerator oneIntroToRuleThemAll()
 	{
+		InvokeRepeating ("FadeToClear", 0.0f, 0.1f);
+		yield return new WaitForSeconds (4.0f);
 		introBox.SetActive (true);
 		setIntroText ("Back in the mists of time when the world was young ruled a powerful Skeleton King who had gold that would make even the poorest man live like a god.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -51,7 +53,7 @@ public class IntroScript : MonoBehaviour {
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
 		yield return new WaitForSeconds (7.0f);
-
+		SceneManager.LoadSceneAsync ("Tutorial");
 	}
 
 	public void setIntroText(string hint)

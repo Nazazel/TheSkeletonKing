@@ -118,6 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9759df2ce6954ea1f4c4a6620d837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeImg: {fileID: 2143964473}
+  fadeSpeed: 1.5
+  introBox: {fileID: 1399544954}
+  introText: {fileID: 2060479386}
+  introStarted: 0
 --- !u!4 &407251588
 Transform:
   m_ObjectHideFlags: 0
