@@ -1382,7 +1382,7 @@ Transform:
   m_LocalScale: {x: 1.6260264, y: 2.007625, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &682222730
 BoxCollider2D:
@@ -3161,7 +3161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1035418319
 AudioListener:
   m_ObjectHideFlags: 0
