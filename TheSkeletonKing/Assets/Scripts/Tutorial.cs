@@ -71,6 +71,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator intro()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("Good day, player! Welcome to the tutorial! Here, you will learn the basic mechanics of our game.\nYou could either press the SpaceBar or the Enter key on your keyboard to progress through dialogue.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -85,6 +86,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator door1complete()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("Hm, the door didn't open. That must mean you need a key to open it! Since you're currently playing as the Red Knight's soul, why don't you grab the key that's behind the black pits with the red aura?");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -99,6 +101,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator key1()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("Perfect! Now try that door again.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -110,6 +113,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator door2complete()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("Hm, I guess you need all three keys to open the doors in this game. Since you have one of them, you only need to get the other two to complete this tutorial!");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -130,6 +134,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator key2()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("I think you're getting the hang of this, player! Now, go back to the Soul Station and change into the Green Knight's soul (remember, press \"E\"). Then, go collect the key behind the green arrow plates (by pressing \"E\").");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -141,6 +146,7 @@ public class Tutorial : MonoBehaviour {
 	public IEnumerator key3()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		setTutorialText ("Congratulations! You've gotten all three keys! Now, simply head to the door and it will open for you.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));

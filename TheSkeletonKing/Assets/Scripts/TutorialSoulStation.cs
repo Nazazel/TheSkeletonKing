@@ -110,6 +110,7 @@ public class TutorialSoulStation : MonoBehaviour {
 	public IEnumerator warning()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		tutorialText.text = "Not so fast, player! Try the door first.";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
@@ -121,6 +122,7 @@ public class TutorialSoulStation : MonoBehaviour {
 	public IEnumerator warningtoo()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		tutorialText.text = "Not so fast, player! Try getting the key first.";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));

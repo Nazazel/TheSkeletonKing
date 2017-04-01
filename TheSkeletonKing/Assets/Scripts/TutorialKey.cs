@@ -78,6 +78,7 @@ public class TutorialKey : MonoBehaviour {
 	public IEnumerator warning()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
 		tutorialText.text = "Not so fast, player! Try the door first.";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
