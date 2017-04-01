@@ -72,7 +72,7 @@ public class Tutorial : MonoBehaviour {
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
 		tutorialBox.SetActive (true);
-		setTutorialText ("Good day, player! Welcome to the tutorial! Here, you will learn the basic mechanics of our game.\n You could either press the SpaceBar or the Enter key on your keyboard to progress through dialogue.");
+		setTutorialText ("Good day, player! Welcome to the tutorial! Here, you will learn the basic mechanics of our game.\nYou could either press the SpaceBar or the Enter key on your keyboard to progress through dialogue.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		setTutorialText ("You are currently playing as the Red Knight's soul. Try going to the door at the end of this hall.");

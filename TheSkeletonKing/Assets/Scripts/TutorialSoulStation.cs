@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialSoulStation : MonoBehaviour {
 
+	public GameObject tutorialBox;
+	public Text tutorialText;
 	public bool requireButtonPress;
 	private bool waitForPress;
 	public bool obj4Complete;
@@ -19,8 +22,7 @@ public class TutorialSoulStation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 3) 
-		{
+		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 3) {
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
 					StopAllCoroutines ();
@@ -33,9 +35,7 @@ public class TutorialSoulStation : MonoBehaviour {
 				}
 				obj4Complete = true;
 			}
-		}
-		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 5) 
-		{
+		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 5) {
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
 					StopAllCoroutines ();
@@ -47,6 +47,10 @@ public class TutorialSoulStation : MonoBehaviour {
 					GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul = 1;
 				}
 				obj6Complete = true;
+			}
+		} else if(waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 0){
+			if (waitForPress && Input.GetKey (KeyCode.E)) {
+				StartCoroutine ("warning");
 			}
 		}
 	}
@@ -94,6 +98,16 @@ public class TutorialSoulStation : MonoBehaviour {
 			StopCoroutine ("OrbTransition");
 		}
 
+	}
+	public IEnumerator warning()
+	{
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		tutorialBox.SetActive (true);
+		tutorialText.text = "Not so fast, player! Try the door first.";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
+		tutorialBox.SetActive (false);
 	}
 
 }
