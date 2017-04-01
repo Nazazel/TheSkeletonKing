@@ -38,8 +38,8 @@ public class Traps : MonoBehaviour
 		else if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul == 3) {
 			GameObject.FindWithTag("Player").GetComponent<Animator>().Play("GreenDeath");		
 		}
-
-        yield return new WaitForSeconds(3.0f);
+		GameObject.Find ("leveltransition").GetComponent<LevelTransition> ().InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+        yield return new WaitForSeconds(7.0f);
         GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
         SceneManager.LoadScene("Lose");
         

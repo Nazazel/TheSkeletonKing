@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject.DontDestroyOnLoad (GameObject.Find("Player"));
 		previousscene = "";
 		currentscene = SceneManager.GetActiveScene ().name;
 		scenetransition = false;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 		currentscene = SceneManager.GetActiveScene ().name;
 
 		if (previousscene != currentscene) {
+			GameObject.Find ("leveltransition").GetComponent<LevelTransition> ().InvokeRepeating ("FadeToClear", 0.0f, 0.1f);
 			scenetransition = true;
 			previousscene = SceneManager.GetActiveScene ().name;
 			StartCoroutine ("levelStart");

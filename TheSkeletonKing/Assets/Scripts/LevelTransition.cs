@@ -38,7 +38,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList1 [Random.Range (0, mapList1.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
-				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		} 
@@ -50,7 +50,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList2 [Random.Range (0, mapList2.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
-				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		}
@@ -62,7 +62,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList3 [Random.Range (0, mapList3.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
-				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
 		}
@@ -73,7 +73,7 @@ public class LevelTransition : MonoBehaviour {
 				yield return new WaitForSeconds (0.1f);
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
-				yield return new WaitUntil(() => FadeImg.color.a == 1);
+				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync ("Map Boss");
 			}
 		}
@@ -94,11 +94,19 @@ public class LevelTransition : MonoBehaviour {
 
 	public void FadeToClear()
 	{
+		if (SceneManager.GetActiveScene ().name == "Lose") {
+			GameObject.Find ("Button").GetComponent<Image> ().enabled = false;
+		}
 		FadeImg.color = Color.Lerp (FadeImg.color, Color.clear, fadeSpeed * Time.deltaTime);
-		if (FadeImg.color.a < 0.2f) {
+		if (FadeImg.color.a < 0.1f) {
 			CancelInvoke ("FadeToClear");
 			FadeImg.color = Color.clear;
 			Debug.Log (FadeImg.color.a);
+			if (SceneManager.GetActiveScene ().name == "Lose") {
+				GameObject.Find ("Button").GetComponent<Image> ().enabled = true;
+				DestroyImmediate (GameObject.Find ("Fade"));
+				DestroyImmediate(GameObject.Find("leveltransition"));
+			}
 		}
 	}
 }

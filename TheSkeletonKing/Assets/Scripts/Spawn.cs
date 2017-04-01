@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject player;
-    public Transform[] spawnPoints;
-    public int spawnPointIndex;
 
 	// Use this for initialization
 	void Start ()
     {
-        Instantiate(player, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+		GameObject.Find ("Player").transform.position = gameObject.transform.position;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+
 }

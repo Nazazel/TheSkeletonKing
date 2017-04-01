@@ -24,4 +24,10 @@ public class door : MonoBehaviour {
 		if (other.name == "Player")
 			Ready = true;
 		}
+
+	void OnTriggerExit2D(Collider2D other) {
+
+		if (other.name == "Player")
+			Ready = false;
+	}
 }
