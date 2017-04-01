@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialKey : MonoBehaviour {
 
+	public GameObject tutorialBox;
+	public Text tutorialText;
 	public bool requireButtonPress;
 	public bool waitForPress;
 	public bool obj2Complete;
@@ -20,8 +23,7 @@ public class TutorialKey : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 1) 
-		{
+		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 1) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
@@ -30,9 +32,7 @@ public class TutorialKey : MonoBehaviour {
 				waitForPress = false;
 				obj2Complete = true;
 			}
-		}
-		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 4) 
-		{
+		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 4) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
@@ -41,9 +41,7 @@ public class TutorialKey : MonoBehaviour {
 				waitForPress = false;
 				obj5Complete = true;
 			}
-		}
-		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 6) 
-		{
+		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 6) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
@@ -51,6 +49,10 @@ public class TutorialKey : MonoBehaviour {
 				gameObject.GetComponent<PolygonCollider2D> ().enabled = false;
 				waitForPress = false;
 				obj7Complete = true;
+			}
+		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 0) {
+			if (waitForPress && Input.GetKey (KeyCode.E)) {
+				StartCoroutine ("warning");
 			}
 		}
 	}
@@ -71,5 +73,16 @@ public class TutorialKey : MonoBehaviour {
 		{
 			waitForPress = false;
 		}
+	}
+
+	public IEnumerator warning()
+	{
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		tutorialBox.SetActive (true);
+		tutorialText.text = "Not so fast, player! Try the door first.";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
+		tutorialBox.SetActive (false);
 	}
 }

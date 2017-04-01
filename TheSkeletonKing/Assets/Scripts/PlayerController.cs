@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 	public bool scenetransition;
 	public string previousscene;
 	public string currentscene;
+	public bool canMove;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 		numKeys = 0;
 		currentSoul = 1;
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+		canMove = true;
 	}
 
 	// Update is called once per frame
@@ -39,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Only left arrow key is read as input; if any directional key is pressed, then movement stops
-		if (!scenetransition && !endGame) {
+		if (!scenetransition && !endGame && canMove) {
 			
 			if (Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow)) {
 				if ((rb.velocity.x > 0.0f) && (rb.velocity.y != 0.0f)) {

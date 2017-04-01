@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TutorialDoor : MonoBehaviour {
 
+	public GameObject tutorialBox;
+	public Text tutorialText;
 	public bool obj1Complete;
 	public bool obj3Complete;
 	public bool obj8Complete;
@@ -32,6 +35,7 @@ public class TutorialDoor : MonoBehaviour {
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			GameObject.FindWithTag("DoorCollider").GetComponent<PolygonCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;
+			StartCoroutine ("finalhint");
 			obj8Complete = true;
 			Ready = false;
 		}
@@ -46,5 +50,16 @@ public class TutorialDoor : MonoBehaviour {
 
 		if (other.name == "Player")
 			Ready = false;
+	}
+
+	public IEnumerator finalhint()
+	{
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		tutorialBox.SetActive (true);
+		tutorialText.text = "Just remember, if you ever need to interact with anything in the game, use the \"E\" key on your keyboard!";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
+		tutorialBox.SetActive (false);
 	}
 }

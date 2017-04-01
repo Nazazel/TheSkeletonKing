@@ -14,6 +14,7 @@ TagManager:
   - spikes
   - pitfalls
   - arrows
+  - Tutorial
   layers:
   - Default
   - TransparentFX
