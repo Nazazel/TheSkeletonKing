@@ -60,7 +60,10 @@ public class TutorialDoor : MonoBehaviour {
 		tutorialText.text = "Well done, player! You've completed the tutorial. Good luck on your journey to find and defeat the Skeleton King!";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
-		tutorialText.text = "Just remember, if you ever need to interact with anything in the game, use the \"E\" key on your keyboard!";
+		tutorialText.text = "Remember, the Red Knight's soul can pass through the black pits with the red aura, the Blue Knight's soul can pass through the spikes with the blue aura, and the Green Knight's soul can pass through the arrow plates with the green aura.";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
+		tutorialText.text = "Also! If you ever need to interact with anything in the game, use the \"E\" key on your keyboard!";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
