@@ -55,7 +55,11 @@ public class TutorialDoor : MonoBehaviour {
 	public IEnumerator finalhint()
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
 		tutorialBox.SetActive (true);
+		tutorialText.text = "Well done, player! You've completed the tutorial. Good luck on your journey to find and defeat the Skeleton King!";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
 		tutorialText.text = "Just remember, if you ever need to interact with anything in the game, use the \"E\" key on your keyboard!";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);

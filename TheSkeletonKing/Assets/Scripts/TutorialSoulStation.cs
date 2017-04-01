@@ -52,6 +52,14 @@ public class TutorialSoulStation : MonoBehaviour {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
 				StartCoroutine ("warning");
 			}
+		} else if(waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 1){
+			if (waitForPress && Input.GetKey (KeyCode.E)) {
+				StartCoroutine ("warningtoo");
+			}
+		} else if(waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 2){
+			if (waitForPress && Input.GetKey (KeyCode.E)) {
+				StartCoroutine ("warning");
+			}
 		}
 	}
 
@@ -104,6 +112,17 @@ public class TutorialSoulStation : MonoBehaviour {
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
 		tutorialBox.SetActive (true);
 		tutorialText.text = "Not so fast, player! Try the door first.";
+		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
+		yield return new WaitForSeconds (0.2f);
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
+		tutorialBox.SetActive (false);
+	}
+
+	public IEnumerator warningtoo()
+	{
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
+		tutorialBox.SetActive (true);
+		tutorialText.text = "Not so fast, player! Try getting the key first.";
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;

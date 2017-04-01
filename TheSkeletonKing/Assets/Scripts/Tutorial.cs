@@ -131,7 +131,7 @@ public class Tutorial : MonoBehaviour {
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
 		tutorialBox.SetActive (true);
-		setTutorialText ("I think you're getting the hang of this, player! Now, go back to the Soul Station and change into the Green Knight's soul (remeber, press \"E\"). Then, go collect the key behind the green arrow plates (by pressing \"E\").");
+		setTutorialText ("I think you're getting the hang of this, player! Now, go back to the Soul Station and change into the Green Knight's soul (remember, press \"E\"). Then, go collect the key behind the green arrow plates (by pressing \"E\").");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
@@ -142,7 +142,7 @@ public class Tutorial : MonoBehaviour {
 	{
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
 		tutorialBox.SetActive (true);
-		setTutorialText ("Congratulations! You've gotten all three keys! Now, simply head to the door and it will open for you. Well done, player! You've completed the tutorial. Good luck on your journey to find and defeat the Skeleton King!");
+		setTutorialText ("Congratulations! You've gotten all three keys! Now, simply head to the door and it will open for you.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = true;
