@@ -15,6 +15,7 @@ TagManager:
   - pitfalls
   - arrows
   - Tutorial
+  - Boss
   layers:
   - Default
   - TransparentFX

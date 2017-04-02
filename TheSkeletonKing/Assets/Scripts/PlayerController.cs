@@ -106,7 +106,10 @@ public class PlayerController : MonoBehaviour {
 
 	public IEnumerator gameEnd()
 	{
-		yield return new WaitForSeconds(0.1f);
+		GameObject.Find ("leveltransition").GetComponent<LevelTransition> ().InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+		yield return new WaitForSeconds(4.0f);
+		SceneManager.LoadSceneAsync ("EnderSceneTheLastScenebender");
+
 	}
 
 }
