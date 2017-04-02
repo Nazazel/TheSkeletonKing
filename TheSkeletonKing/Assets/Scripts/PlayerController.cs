@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 		currentscene = SceneManager.GetActiveScene ().name;
 
 		if (previousscene != currentscene) {
+			canMove = true;
 			GameObject.Find ("leveltransition").GetComponent<LevelTransition> ().InvokeRepeating ("FadeToClear", 0.0f, 0.1f);
 			scenetransition = true;
 			previousscene = SceneManager.GetActiveScene ().name;

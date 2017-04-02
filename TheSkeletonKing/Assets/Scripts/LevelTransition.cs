@@ -81,6 +81,7 @@ public class LevelTransition : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other) {
+		GameObject.Find ("Player").GetComponent<PlayerController> ().canMove = false;
 		StartCoroutine("transitionLevel");
 	}
 

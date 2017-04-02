@@ -194,6 +194,7 @@ MonoBehaviour:
   scenetransition: 0
   previousscene: 
   currentscene: 
+  canMove: 0
 --- !u!124 &124345472933031242
 Behaviour:
   m_ObjectHideFlags: 1
