@@ -33,3 +33,7 @@ EditorBuildSettings:
     path: Assets/Map Boss.unity
   - enabled: 1
     path: Assets/Map 3.unity
+  - enabled: 1
+    path: Assets/EnderSceneTheLastScenebender.unity
+  - enabled: 1
+    path: Assets/Credits.unity
