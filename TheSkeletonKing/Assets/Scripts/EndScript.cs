@@ -101,7 +101,7 @@ public class EndScript : MonoBehaviour {
 		InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
 		StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),5.0f));
 		yield return new WaitForSeconds (6.0f);
-		SceneManager.LoadSceneAsync ("Menu");
+		SceneManager.LoadSceneAsync ("Credits");
 	}
 
 	public void setIntroText(string hint)
