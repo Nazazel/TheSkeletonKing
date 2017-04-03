@@ -99,6 +99,7 @@ public class EndScript : MonoBehaviour {
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		yield return new WaitForSeconds (0.2f);
 		InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+		StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),5.0f));
 		yield return new WaitForSeconds (6.0f);
 		SceneManager.LoadSceneAsync ("Menu");
 	}

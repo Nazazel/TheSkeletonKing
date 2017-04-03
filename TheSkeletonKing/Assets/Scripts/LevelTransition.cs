@@ -38,6 +38,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList1 [Random.Range (0, mapList1.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),3.0f));
 				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
@@ -50,6 +51,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList2 [Random.Range (0, mapList2.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),3.0f));
 				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
@@ -62,6 +64,7 @@ public class LevelTransition : MonoBehaviour {
 				randomizedName = mapList3 [Random.Range (0, mapList3.Count)].ToString();
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),3.0f));
 				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync (randomizedName);
 			}
@@ -73,6 +76,7 @@ public class LevelTransition : MonoBehaviour {
 				yield return new WaitForSeconds (0.1f);
 				started = true;
 				InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+				StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),3.0f));
 				yield return new WaitForSeconds (4.0f);
 				SceneManager.LoadSceneAsync ("Map Boss");
 			}
