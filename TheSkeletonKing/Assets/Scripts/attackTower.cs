@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class attackTower : MonoBehaviour {
+
+
 	public bool requireButtonPress;
 	private bool waitForPress;
+
 	// Use this for initialization
 	void Start () {
 		
