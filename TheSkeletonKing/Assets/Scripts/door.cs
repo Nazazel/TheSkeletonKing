@@ -13,6 +13,7 @@ public class door : MonoBehaviour {
 	void Update () {
 		if (Ready && GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys == 3)
 		{
+			gameObject.GetComponent<AudioSource> ().Play ();
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			GameObject.FindWithTag("DoorCollider").GetComponent<PolygonCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;

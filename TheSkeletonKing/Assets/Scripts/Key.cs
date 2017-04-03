@@ -16,7 +16,7 @@ public class Key : MonoBehaviour {
 	{
 		if (waitForPress && Input.GetKey (KeyCode.E)) 
 		{
-			
+			gameObject.GetComponent<AudioSource> ().Play ();
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			gameObject.GetComponent<BoxCollider2D> ().enabled = false;

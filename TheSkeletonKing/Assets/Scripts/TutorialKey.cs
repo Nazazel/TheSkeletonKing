@@ -25,7 +25,7 @@ public class TutorialKey : MonoBehaviour {
 	{
 		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 1) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
-
+				gameObject.GetComponent<AudioSource> ().Play ();
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<PolygonCollider2D> ().enabled = false;
@@ -34,7 +34,7 @@ public class TutorialKey : MonoBehaviour {
 			}
 		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 4) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
-
+				gameObject.GetComponent<AudioSource> ().Play ();
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<PolygonCollider2D> ().enabled = false;
@@ -43,7 +43,7 @@ public class TutorialKey : MonoBehaviour {
 			}
 		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 6) {
 			if (waitForPress && Input.GetKey (KeyCode.E)) {
-
+				gameObject.GetComponent<AudioSource> ().Play ();
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys++;
 				gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 				gameObject.GetComponent<PolygonCollider2D> ().enabled = false;

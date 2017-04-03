@@ -67,6 +67,7 @@ public class IntroScript : MonoBehaviour {
 		setIntroText ("You, the player, will help the souls navigate through the mazes again, avoiding dangerous traps once more to find and defeat the king.");
 		yield return new WaitUntil (() => Input.GetKeyDown (KeyCode.Return));
 		InvokeRepeating ("FadeToBlack", 0.0f, 0.1f);
+		StartCoroutine (AudioFadeOut.FadeOut(GameObject.Find("Music").GetComponent<AudioSource>(),5.0f));
 		yield return new WaitForSeconds (7.0f);
 		SceneManager.LoadSceneAsync ("Tutorial");
 	}

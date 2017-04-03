@@ -24,6 +24,7 @@ public class TutorialSoulStation : MonoBehaviour {
 	void Update () {
 		if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 3) {
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
+				gameObject.GetComponent<AudioSource> ().Play ();
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
 					StopAllCoroutines ();
 					StartCoroutine ("OrbTransition");
@@ -37,6 +38,7 @@ public class TutorialSoulStation : MonoBehaviour {
 			}
 		} else if (waitForPress && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 5) {
 			if (waitForPress && Input.GetKeyDown (KeyCode.E)) {
+				gameObject.GetComponent<AudioSource> ().Play ();
 				if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
 					StopAllCoroutines ();
 					StartCoroutine ("OrbTransition");

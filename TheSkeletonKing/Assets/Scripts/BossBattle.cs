@@ -47,6 +47,7 @@ public class BossBattle : MonoBehaviour {
 
 	public void damageBoss () {
 		if (bossHealth > 0) {
+			gameObject.GetComponent<AudioSource> ().Play ();
 			StartCoroutine ("damagevisible");
 			bossHealth--;
 		}

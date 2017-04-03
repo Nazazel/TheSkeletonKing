@@ -18,6 +18,7 @@ public class attackTower : MonoBehaviour {
 	{
 		if (waitForPress && Input.GetKey (KeyCode.E)) 
 		{
+			gameObject.GetComponent<AudioSource> ().Play ();
 			GameObject.FindWithTag("Boss").GetComponent<BossBattle>().damageBoss();
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			gameObject.GetComponent <BoxCollider2D> ().enabled = false;

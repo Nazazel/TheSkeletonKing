@@ -17,11 +17,13 @@ public class SoulStation : MonoBehaviour {
 		if(waitForPress && Input.GetKeyDown(KeyCode.E))
 		{
 			if (GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul < 3) {
+				gameObject.GetComponent<AudioSource> ().Play ();
 				StopCoroutine ("OrbTransition");
 				StartCoroutine ("OrbTransition");
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul++;
 			} 
 			else {
+				gameObject.GetComponent<AudioSource> ().Play ();
 				StopCoroutine ("OrbTransition");
 				StartCoroutine ("OrbTransition");
 				GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().currentSoul = 1;

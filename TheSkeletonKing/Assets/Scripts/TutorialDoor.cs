@@ -32,6 +32,7 @@ public class TutorialDoor : MonoBehaviour {
 		}
 		else if (Ready && GameObject.FindWithTag ("ObjectiveTracker").GetComponent<Tutorial> ().objectiveNum == 7)
 		{
+			gameObject.GetComponent<AudioSource> ().Play ();
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			GameObject.FindWithTag("DoorCollider").GetComponent<PolygonCollider2D> ().enabled = false;
 			GameObject.FindWithTag ("Player").GetComponent<PlayerController> ().numKeys = 0;

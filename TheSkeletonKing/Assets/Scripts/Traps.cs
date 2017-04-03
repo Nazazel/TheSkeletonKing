@@ -27,6 +27,7 @@ public class Traps : MonoBehaviour
 
     IEnumerator waitThreeSeconds()
     {
+		GameObject.Find("SoulDeath").GetComponent<AudioSource> ().Play ();
 		GameObject.FindWithTag("Player").GetComponent<PlayerController>().endGame = true;
 		GameObject.FindWithTag("Player").GetComponent<PlayerController>().rb.velocity = new Vector2 (0.0f, 0.0f);;
 		if (GameObject.FindWithTag("Player").GetComponent<PlayerController>().currentSoul == 1) {
